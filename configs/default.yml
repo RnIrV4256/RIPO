@@ -1,0 +1,31 @@
+seed: 1337
+short_side: 352
+num_text: 8
+keep_text: 3
+num_perturb: 6
+# thresholds for mask from saliency
+mask:
+  high_sigma: 1.0
+  low_sigma: 0.3
+  min_area_ratio: 0.005
+  max_ar: 6.0
+  margin_frac: 0.06
+
+scores:
+  w1_iou: 0.45
+  w2_area: 0.20
+  w3_focus: 0.35
+  tau_softmax: 3.0
+  alpha_geo: 10.0readme.txt
+  beta_geo: 10.0
+  lambda_amo: 0.6
+
+openclip:
+  model_name: RN50           # 推荐用 RN50 便于 Grad-CAM
+  pretrained: openai         # 也可用 laion400m_e32 / yfcc15m 等
+  device: auto               # auto / cuda / cpu
+
+sam:
+  checkpoint: weights/sam_vit_b.pth  # 请放置到本地路径
+  model_type: vit_b                   # vit_h / vit_l / vit_b
+  device: auto                        # auto / cuda / cpu

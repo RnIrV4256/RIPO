@@ -1,0 +1,18 @@
+numpy
+scipy
+scikit-image
+opencv-python
+Pillow
+matplotlib
+# Deep learning
+torch
+torchvision
+# OpenCLIP (for CLIP + Grad-CAM)
+open-clip-torch
+ftfy
+regex
+tqdm
+# SAM (Meta)
+segment-anything
+# timm comes with open-clip but list explicitly for safety
+timm
